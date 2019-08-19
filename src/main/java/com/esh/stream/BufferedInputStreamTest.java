@@ -2,10 +2,14 @@ package com.esh.stream;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 //Buffered input stream with support of mark, reset and skip
@@ -34,6 +38,26 @@ public class BufferedInputStreamTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+}
+
+class BufferedReaderTest{
+	public static void main(String[] args) {
+		File file = new File("/Users/emathur/Documents/a.txt");
+		try(BufferedWriter writer = new BufferedWriter(new FileWriter(file))){
+			writer.write("Eshita Mathur");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 		
+		try(BufferedReader reader = new BufferedReader(new FileReader(file))){
+			reader.mark(15);
+			System.out.println(reader.readLine());
+			reader.reset();
+			System.out.println(reader.readLine());
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+				
 	}
 }
