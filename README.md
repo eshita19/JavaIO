@@ -1,7 +1,7 @@
 # JAVA IO
- JAVA IO : https://www.geeksforgeeks.org/java-io-packag/
- JAVA NIO :  http://tutorials.jenkov.com/java-nio
- JAVA IO vs NIO : https://www.quora.com/What-is-the-difference-between-buffers-in-Java-io-and-buffers-in-Java-nio
+ - JAVA IO : https://www.geeksforgeeks.org/java-io-packag/
+ - JAVA NIO :  http://tutorials.jenkov.com/java-nio
+ - JAVA IO vs NIO : https://www.quora.com/What-is-the-difference-between-buffers-in-Java-io-and-buffers-in-Java-nio
 
 ### Streams -
  -  Abstraction between physical device and Java, that either produces or consumes information.
